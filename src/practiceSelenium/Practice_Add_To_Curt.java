@@ -18,7 +18,12 @@ public class Practice_Add_To_Curt {
         Thread.sleep(3000);
         driver.findElement(By.linkText("VIEW CART")).click();
        // driver.findElement(By.cssSelector("button[class='view-cart-button']")).click();
-        driver.findElement(By.cssSelector("a[href='https://www.gamestop.com/checkout/login/']")).click();
+        JavascriptExecutor src= (JavascriptExecutor) driver;
+        Thread.sleep(3000);
+        src.executeScript("window.scrollBy(0,400);");
+       // driver.findElement(By.cssSelector("a[href='https://www.gamestop.com/checkout/login/']")).click();
+        //driver.findElement(By.xpath("//*[@id='ae-main-content']/div[1]/div[2]/div[4]/div[2]/div/a")).click();
+        driver.findElement(By.xpath("//div[@class='row p-2 bg-white mb-3 ']/div[2]/div/a")).click();
 
 
     }
